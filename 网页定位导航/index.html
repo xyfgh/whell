@@ -4,18 +4,33 @@
 	<meta charset="UTF-8">
 	<title>网页定位导航demo</title>
 	<style>
-		html{
+		body,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,p,input,select,textarea,form,hr{
+			margin: 0;
+			padding: 0;
+		}
+		html,body{
 			width:100%;
 			height: 100%;
 		}
-		html{
-			width:inherit;
+		.content{
+			width: inherit;
 			height: inherit;
 		}
 		.page{
-			width: 60%;
-			height: 80%;
+			width: 80%;
+			height: 60%;
 			margin: auto;
+			position: relative;
+		}
+		h2{
+			text-align: center;
+			display: block;
+			height: 50px;
+			position: absolute;  
+			top: 0; left: 0; bottom: 0; right: 0;
+			margin:auto;
+			font:bold 50px/50px "Microsoft YaHei";
+			color: #FFF;
 		}
 		#page1{
 			background-color: #AAA;
@@ -29,17 +44,39 @@
 		#page4{
 			background-color: #DDD;
 		}
+		.nav{
+			position: fixed;
+			top: 50%;
+			left: 90%;
+		}
+		.nav ul{
+			list-style: none;
+		}
+		.nav a{
+			color: #FFF;
+			display: block;
+			width: 100px;
+			height: 30px;
+			background-color: #AAF;
+			font: 14px/30px 微软雅黑,"Microsoft YaHei";
+			text-align: center;
+			margin-bottom: 1px;
+			text-decoration: none;
+		}
+		.nav a:hover{
+			background-color: #88E;
+		}
 	</style>
 </head>
 <body>
-	<div class="cotent">
-		<div class="page" id="page1"></div>
-		<div class="page" id="page2"></div>
-		<div class="page" id="page3"></div>
-		<div class="page" id="page4"></div>
+	<div class="content">
+		<div class="page" id="page1"><h2>这是一楼</h2></div>
+		<div class="page" id="page2"><h2>这是二楼</h2></div>
+		<div class="page" id="page3"><h2>这是三楼</h2></div>
+		<div class="page" id="page4"><h2>这是四楼</h2></div>
 	</div>
 	<div class="nav">
-		<ul>
+		<ul class="navList">
 			<li><a href="#page1">一楼</a></li>
 			<li><a href="#page2">二楼</a></li>
 			<li><a href="#page3">三楼</a></li>
